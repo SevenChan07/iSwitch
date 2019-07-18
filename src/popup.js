@@ -26,20 +26,20 @@ CodeMirror.defineMode('switch', function () {
   }
 })
 
-// 获取本地存储
+// the local rules
 let rulesService = new LocalRules()
 
-// 编辑器
+// the editor
 const editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   mode: 'switch'
 })
 
-// 设置编辑器内容
+// set the value
 editor.setValue(rulesService.get())
 
 document.getElementById('ok').addEventListener('click', function () {
-  // 设置本地存储
+  // set local rules
   rulesService.set(editor.getValue())
   window.close()
 })

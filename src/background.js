@@ -3,10 +3,11 @@ const rulesService = new LocalRules()
 function getSwitchPattens() {
   const rules = rulesService.get()
 
-  const lineValues = rules.split('\n') // 每行数据
-  const switchPattens = [] // 要转换的数据
-  const reg = /\s{2,}/g // 正则匹配多个连续空格
+  const lineValues = rules.split('\n') // every single line
+  const switchPattens = [] 
+  const reg = /\s{2,}/g // regular expression for multiple spaces 
 
+  // generate switch rules
   lineValues.forEach(function (e) {
     e = trimStr(e).replace(reg, ' ')
     if (e.indexOf('#') !== 0 && e !== '' && e.indexOf(' ') > -1) {
