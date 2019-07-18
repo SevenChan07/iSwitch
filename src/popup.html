@@ -1,0 +1,35 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="codemirror.css">
+      <script src="codemirror.js"></script>
+      <script src="localRules.js"></script>
+      <style>
+        button {
+          height: 30px;
+          width: 70px;
+          outline: none;
+          color: #fff;
+          background-color: #1890ff;
+          border-color: #1890ff;
+          margin-right: 10px;
+          margin-top: 8px;
+        }
+        .CodeMirror {
+          width: 750px;
+          height: 250px;
+          border-bottom: 1px solid #ccc;
+        }
+        .action {
+          display: flex;
+        }
+      </style>
+    </head>
+    <body>
+      <textarea id="code"></textarea>
+      <div class="action">
+        <button id="ok">OK</button>
+      </div>
+      <script src="popup.js"></script>
+    </body>
+  </html>
